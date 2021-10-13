@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Shadow Guy</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1280 height=640 style="width: 1280; height: 640px; background: #231F20"></canvas>
+    <script src="Build/Shadow guy webgl proto.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Shadow guy webgl proto.data.unityweb",
+        frameworkUrl: "Build/Shadow guy webgl proto.framework.js.unityweb",
+        codeUrl: "Build/Shadow guy webgl proto.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "BenightedAlizar",
+        productName: "Shadow Guy",
+        productVersion: "1337",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
